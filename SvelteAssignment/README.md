@@ -71,14 +71,14 @@ API Gateway: http://localhost:8080
 Frontend: http://localhost:5731
 
 ✨ Usage Flow
-1️⃣ Login
-2️⃣ Browse/search products        
-3️⃣ Add to cart
-4️⃣ Place order (success & fail cases)
-5️⃣ View orders
+-1️⃣ Login
+-2️⃣ Browse/search products        
+-3️⃣ Add to cart
+-4️⃣ Place order (success & fail cases)
+-5️⃣ View orders
 
 📜 License
-This project is for NAGP 2025 educational purposes.
+-This project is for NAGP 2025 educational purposes.
 
 👤 Author
-Vikas Bhalla
+-Vikas Bhalla
