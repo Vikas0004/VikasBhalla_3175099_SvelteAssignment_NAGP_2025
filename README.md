@@ -1,4 +1,4 @@
-# 🛒 NAGP 2025 E-Commerce Microservices Assignment
+# 🛒 NAGP 2025 Svelte Assignment
 
 This project is an end-to-end **e-commerce portal** built with:
 - **Java Spring Boot Microservices**
@@ -68,6 +68,8 @@ npm install
 
 npm run dev
 
+---
+
 2️⃣ Full System with Docker Compose
 
 cd VikasBhalla_3175099_SvelteAssignment_NAGP_2025
@@ -79,6 +81,8 @@ Eureka: http://localhost:8761
 API Gateway: http://localhost:8080
 
 Frontend: http://localhost:5731
+
+---
 
 ✨ Usage Flow
 
@@ -92,9 +96,13 @@ Frontend: http://localhost:5731
 
 5️⃣ View orders
 
+---
+
 📜 License
 
 This project is for NAGP 2025 educational purposes.
+
+---
 
 👤 Author
 
