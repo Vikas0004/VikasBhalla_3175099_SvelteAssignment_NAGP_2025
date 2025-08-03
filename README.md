@@ -89,22 +89,15 @@ Frontend: http://localhost:5173
 Use these demo credentials to log in:
 
 Username: john
-
 Password: password123
-
-
+<br />
 Username: jane
-
 Password: password456
-
-
+<br />
 Username: vikas
-
 Password: vikas1123
-
-
+<br />
 Username: vishal
-
 Password: vishal1123
 
 ---
