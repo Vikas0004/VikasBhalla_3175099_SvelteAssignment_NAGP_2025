@@ -1,38 +1,80 @@
-# sv
+# 🛒 NAGP 2025 E-Commerce Microservices Assignment
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This project is an end-to-end **e-commerce portal** built with:
+- **Java Spring Boot Microservices**
+- **Spring Cloud Eureka Service Discovery**
+- **API Gateway**
+- **JWT-based Authentication**
+- **SvelteKit Frontend**
+- **Docker Compose Orchestration**
 
-## Creating a project
+---
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 🚀 Features
 
-```bash
-# create a new project in the current directory
-npx sv create
+- User login with JWT
+- Product search & catalog
+- Shopping cart with quantity updates
+- Order placement with stock validation
+- Order history
+- Fully containerized with **Docker Compose**
 
-# create a new project in my-app
-npx sv create my-app
-```
+---
 
-## Developing
+## 📂 Project Structure
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+project-root/
+├── docker-compose.yml
+├── SvelteAssignment/ # Frontend source code
+│ ├── src/
+│ ├── static/
+│ ├── svelte.config.js
+│ ├── vite.config.ts
+│ ├── package.json
+│ ├── .env
+│ └── Dockerfile
+└── README.md
 
-```bash
+
+---
+
+## ✅ Prerequisites
+
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [Git](https://git-scm.com/)
+
+---
+
+## ⚙️ How to Run
+
+### 🔥 Local Development (Frontend only)
+
+bash
+cd SvelteAssignment
+npm install
 npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+2️⃣ Full System with Docker Compose
 
-## Building
+cd SvelteAssignment
+docker-compose up --build
 
-To create a production version of your app:
+Eureka: http://localhost:8761
 
-```bash
-npm run build
-```
+API Gateway: http://localhost:8080
 
-You can preview the production build with `npm run preview`.
+Frontend: http://localhost:5731
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+✨ Usage Flow
+1️⃣ Login
+2️⃣ Browse/search products        
+3️⃣ Add to cart
+4️⃣ Place order (success & fail cases)
+5️⃣ View orders
+
+📜 License
+This project is for NAGP 2025 educational purposes.
+
+👤 Author
+Vikas Bhalla
