@@ -51,13 +51,17 @@ project-root/
 ### 🔥 Local Development (Frontend only)
 
 bash
+
 cd SvelteAssignment
+
 npm install
+
 npm run dev
 
 2️⃣ Full System with Docker Compose
 
 cd SvelteAssignment
+
 docker-compose up --build
 
 Eureka: http://localhost:8761
