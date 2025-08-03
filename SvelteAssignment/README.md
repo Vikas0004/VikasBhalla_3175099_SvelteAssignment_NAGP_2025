@@ -42,6 +42,7 @@ project-root/
 │ ├── .env
 
 │ └── Dockerfile
+
 └── README.md
 
 
