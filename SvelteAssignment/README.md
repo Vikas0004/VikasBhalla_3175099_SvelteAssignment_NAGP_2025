@@ -70,7 +70,7 @@ npm run dev
 
 2️⃣ Full System with Docker Compose
 
-cd SvelteAssignment
+cd VikasBhalla_3175099_SvelteAssignment_NAGP_2025
 
 docker-compose up --build
 
