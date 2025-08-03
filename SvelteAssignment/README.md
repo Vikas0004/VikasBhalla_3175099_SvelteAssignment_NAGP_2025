@@ -24,14 +24,23 @@ This project is an end-to-end **e-commerce portal** built with:
 ## 📂 Project Structure
 
 project-root/
+
 ├── docker-compose.yml
+
 ├── SvelteAssignment/ # Frontend source code
+
 │ ├── src/
+
 │ ├── static/
+
 │ ├── svelte.config.js
+
 │ ├── vite.config.ts
+
 │ ├── package.json
+
 │ ├── .env
+
 │ └── Dockerfile
 └── README.md
 
