@@ -1,0 +1,109 @@
+version: '3.8'
+services:
+  eureka-server:
+    image: vikasbhalla0004/eureka-server:latest
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - backend
+
+  api-gateway:
+    image: vikasbhalla0004/api-gateway:latest
+    container_name: api-gateway
+    depends_on:
+      - eureka-server
+    ports:
+      - "8080:8080"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
+    networks:
+      - backend
+
+  user-service:
+    image: vikasbhalla0004/user-service:latest
+    container_name: user-service
+    depends_on:
+      - eureka-server
+    ports:
+      - "8081:8081"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
+    networks:
+      - backend
+
+  product-service:
+    image: vikasbhalla0004/product-service:latest
+    container_name: product-service
+    depends_on:
+      - eureka-server
+    ports:
+      - "8082:8082"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
+    networks:
+      - backend
+
+  cart-service:
+    image: vikasbhalla0004/cart-service:latest
+    container_name: cart-service
+    depends_on:
+      - eureka-server
+    ports:
+      - "8083:8083"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
+    networks:
+      - backend
+
+  order-service:
+    image: vikasbhalla0004/order-service:latest
+    container_name: order-service
+    depends_on:
+      - eureka-server
+    ports:
+      - "8084:8084"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
+    networks:
+      - backend
+
+  inventory-service:
+    image: vikasbhalla0004/inventory-service:latest
+    container_name: inventory-service
+    depends_on:
+      - eureka-server
+    ports:
+      - "8085:8085"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
+    networks:
+      - backend
+
+  payment-service:
+    image: vikasbhalla0004/payment-service:latest
+    container_name: payment-service
+    depends_on:
+      - eureka-server
+    ports:
+      - "8086:8086"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
+    networks:
+      - backend
+
+  svelte-frontend:
+    image: vikasbhalla0004/svelte-frontend:latest
+    container_name: svelte-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - api-gateway
+    environment:
+      - VITE_API_URL=http://api-gateway:8080
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
